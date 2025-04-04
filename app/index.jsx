@@ -2,6 +2,7 @@ import { Pressable, Text, TextInput, View } from "react-native";
 import { useState } from "react";
 import axios from "axios";
 import { router } from "expo-router";
+import styles from "../assets/styles/StylesApp";
 
 function Index() {
 
@@ -44,20 +45,20 @@ const UsuarioData={
 
 
   return (
-    <View>
-      <Text>Registro de usuario</Text>
-      <Text>Nombre</Text>
-      <TextInput placeholder="Nombre" value={nombre} onChangeText={setNombre} />
-      <Text>Apellido</Text>
-      <TextInput placeholder="Apellido" value={apellido} onChangeText={setApellido} />
-      <Text>Correo</Text>
-      <TextInput placeholder="Email" value={correo} onChangeText={setCorreo} />
-      <Text>Contraseña</Text>
-      <TextInput placeholder="Contraseña" value={password} onChangeText={setPassword} />
-      <Text>Telefono</Text>
-      <TextInput placeholder="Teléfono" value={telefono} onChangeText={setTelefono} />
-      <Pressable onPress={enviarDatos}>
-        <Text>Registrar</Text>
+    <View style={styles.container}>
+      <Text style={styles.title} >Registro de usuario</Text>
+      <Text style={styles.text}>Nombre</Text>
+      <TextInput  style={styles.input} placeholder="Nombre" value={nombre} onChangeText={setNombre} />
+      <Text style={styles.text}>Apellido</Text>
+      <TextInput style={styles.input} placeholder="Apellido" value={apellido} onChangeText={setApellido} />
+      <Text style={styles.text}>Correo</Text>
+      <TextInput style={styles.input} placeholder="Email" value={correo} onChangeText={setCorreo} />
+      <Text style={styles.text}>Contraseña</Text>
+      <TextInput style={styles.input} placeholder="Contraseña" value={password} onChangeText={setPassword} />
+      <Text style={styles.text}>Telefono</Text>
+      <TextInput style={styles.input} placeholder="Teléfono" value={telefono} onChangeText={setTelefono} />
+      <Pressable onPress={enviarDatos} style={styles.button}>
+        <Text style={styles.buttonText}>Registrar</Text>
       </Pressable>
     </View>
   );
