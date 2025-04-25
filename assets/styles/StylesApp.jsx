@@ -59,6 +59,9 @@ const styles = StyleSheet.create({
         width: "80%",
         textAlign: "center",
     },
+    pedidos:{
+        height:100
+    }
 
 });
 export default styles;
